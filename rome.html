@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Istanbul - EuroGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="back-btn">← Back to Map</a>
+        <div class="logo">EuroGuide: Istanbul</div>
+    </nav>
+
+    <header class="city-hero rome-hero">
+        <div class="hero-text">
+            <h1>ROME</h1>
+            <p>The Eternal City</p>
+        </div>
+    </header>
+
+    <main class="city-content fade-in">
+        <section class="info-box">
+            <h2>About the City</h2>
+            <p>Rome, the Eternal City, is a living museum. With nearly 3,000 years of globally influential art, architecture, and culture on display.</p>
+        </section>
+
+        <section class="section-title"><h2>Top Sights to Visit</h2></section>
+
+        <div class="card-grid">
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.8!2d12.49!3d41.89!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDUzJzI1LjAiTiAxMsKwMjknMzIuMCJF!5e0!3m2!1sen!2str!4v1', 'Colosseum Location')">
+                <img src="images/colosseum.jpg" alt="Colosseum">
+                <div class="card-info">
+                    <h3>Colosseum 📍</h3>
+                    <p>Click for Map! The largest ancient amphitheatre ever built.</p>
+                </div>
+            </div>
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969!2d12.48!3d41.90!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDU0JzAzLjAiTiAxMsKwMjgnNTguMCJF!5e0!3m2!1sen!2str!4v1', 'Trevi Fountain Location')">
+                <img src="images/trevi.jpg" alt="Trevi Fountain">
+                <div class="card-info">
+                    <h3>Trevi Fountain 📍</h3>
+                    <p>Click for Map! Throw a coin to ensure your return to Rome.</p>
+                </div>
+            </div>
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969!2d12.45!3d41.90!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDU0JzA4LjAiTiAxMsKwMjcnMjYuMCJF!5e0!3m2!1sen!2str!4v1', 'Vatican City Location')">
+                <img src="images/vatican.jpg" alt="Vatican City">
+                <div class="card-info">
+                    <h3>Vatican City 📍</h3>
+                    <p>Click for Map! Home to the Pope and iconic art.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-title" style="margin-top: 50px;"><h2>What to Eat?</h2></section>
+
+        <div class="card-grid">
+            <div class="card">
+                <img src="images/pizza.jpg" alt="Pizza">
+                <div class="card-info">
+                    <h3>Pizza Margherita</h3>
+                    <p>Authentic Roman pizza with thin crust and fresh tomato.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/gelato.jpg" alt="Gelato">
+                <div class="card-info">
+                    <h3>Gelato</h3>
+                    <p>Italian ice cream, denser and more flavorful than regular ice cream.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <section class="timeline-section">
+        <h2>⏱️ Perfect 1-Day Itinerary</h2>
+        <div class="timeline">
+            <div class="time-container left">
+                <div class="content">
+                    <h3>☕ 08:30 AM - Espresso Start</h3>
+                    <p>Stand at a bar counter like a local and drink a quick Espresso.</p>
+                </div>
+            </div>
+            <div class="time-container right">
+                <div class="content">
+                    <h3>⚔️ 10:00 AM - Ancient Rome</h3>
+                    <p>Explore the Colosseum and Roman Forum before it gets too hot.</p>
+                </div>
+            </div>
+            <div class="time-container left">
+                <div class="content">
+                    <h3>🍝 01:30 PM - Pasta Lunch</h3>
+                    <p>Enjoy an authentic Carbonara or Cacio e Pepe in Trastevere.</p>
+                </div>
+            </div>
+            <div class="time-container right">
+                <div class="content">
+                    <h3>⛲ 08:00 PM - Trevi at Night</h3>
+                    <p>Throw a coin into the Trevi Fountain beautifully lit up at night.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 EuroGuide Project</p>
+    </footer>
+
+
+
+
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeMap()">×</span>
+            <h3 id="mapTitle">Location</h3>
+            <iframe id="googleMap" src="" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openMap(url, title) {
+            var modal = document.getElementById("mapModal");
+            var mapFrame = document.getElementById("googleMap");
+            var mapLabel = document.getElementById("mapTitle");
+            mapFrame.src = url;
+            mapLabel.innerText = title;
+            modal.style.display = "flex";
+        }
+        function closeMap() {
+            document.getElementById("mapModal").style.display = "none";
+            document.getElementById("googleMap").src = "";
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("mapModal")) { closeMap(); }
+        }
+    </script>
+</body>
+
+</body>
+</html>

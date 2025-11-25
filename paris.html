@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Istanbul - EuroGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="back-btn">← Back to Map</a>
+        <div class="logo">EuroGuide: Istanbul</div>
+    </nav>
+
+    <header class="city-hero paris-hero">
+        <div class="hero-text">
+            <h1>PARIS</h1>
+            <p>The City of Love</p>
+        </div>
+    </header>
+
+    <main class="city-content fade-in">
+        <section class="info-box">
+            <h2>About the City</h2>
+            <p>Paris, the City of Light, is known for its cafe culture, fashion boutiques, and world-famous art. It is one of the most romantic destinations in the world.</p>
+        </section>
+
+        <section class="section-title">
+            <h2>Top Sights to Visit</h2>
+        </section>
+
+        <div class="card-grid">
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937604!2d2.292292615509614!3d48.858370079287466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEyfel%20Kulesi!5e0!3m2!1str!2str!4v1634567890123!5m2!1str!2str', 'Eiffel Tower Location')">
+                <img src="images/eiffel.jpeg" alt="Eiffel Tower">
+                <div class="card-info">
+                    <h3>Eiffel Tower 📍</h3>
+                    <p>Click to see map! The iron lady of Paris, offering breathtaking views.</p>
+                </div>
+            </div>
+
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.853444389819!2d2.335455315509688!3d48.86061107928771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d877937b0f%3A0xb975fcfa192f84d4!2sLouvre%20M%C3%BCzesi!5e0!3m2!1str!2str!4v1634567890123!5m2!1str!2str', 'Louvre Museum Location')">
+                <img src="images/louvre.jpg" alt="Louvre Museum">
+                <div class="card-info">
+                    <h3>Louvre Museum 📍</h3>
+                    <p>Click to see map! The world's largest art museum.</p>
+                </div>
+            </div>
+
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.3275997635956!2d2.347059915509458!3d48.85296817928688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e19ff53a01%3A0x364bb13253b92583!2sNotre%20Dame%20Katedrali!5e0!3m2!1str!2str!4v1634567890123!5m2!1str!2str', 'Notre Dame Location')">
+                <img src="images/notredame.jpg" alt="Notre Dame">
+                <div class="card-info">
+                    <h3>Notre Dame 📍</h3>
+                    <p>Click to see map! A masterpiece of French Gothic architecture.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-title" style="margin-top: 50px;">
+            <h2>What to Eat?</h2>
+        </section>
+
+        <div class="card-grid">
+            <div class="card">
+                <img src="images/croissant.jpg" alt="Croissant">
+                <div class="card-info">
+                    <h3>Croissant</h3>
+                    <p>Buttery, flaky pastry named for its crescent shape.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/macaron.jpg" alt="Macarons">
+                <div class="card-info">
+                    <h3>Macarons</h3>
+                    <p>Colorful meringue-based confection with sweet filling.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="timeline-section">
+        <h2>⏱️ Perfect 1-Day Itinerary</h2>
+        <div class="timeline">
+            <div class="time-container left">
+                <div class="content">
+                    <h3>☕ 09:00 AM - Café Culture</h3>
+                    <p>Start with a Café au Lait and a fresh Croissant at a sidewalk café in Montmartre.</p>
+                </div>
+            </div>
+            
+            <div class="time-container right">
+                <div class="content">
+                    <h3>🗼 11:30 AM - The Iron Lady</h3>
+                    <p>Head to the Eiffel Tower. Take photos from Trocadéro for the best view.</p>
+                </div>
+            </div>
+
+            <div class="time-container left">
+                <div class="content">
+                    <h3>🥪 01:30 PM - Seine Picnic</h3>
+                    <p>Grab a baguette sandwich and relax by the Seine River or in Tuileries Garden.</p>
+                </div>
+            </div>
+
+            <div class="time-container right">
+                <div class="content">
+                    <h3>🚢 08:00 PM - Seine at Night</h3>
+                    <p>Take a Bateaux Mouches boat cruise to see the monuments illuminated.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 EuroGuide Project</p>
+    </footer>
+
+
+
+
+
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeMap()">×</span>
+            <h3 id="mapTitle">Location</h3>
+            <iframe id="googleMap" src="" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openMap(url, title) {
+            var modal = document.getElementById("mapModal");
+            var mapFrame = document.getElementById("googleMap");
+            var mapLabel = document.getElementById("mapTitle");
+            mapFrame.src = url;
+            mapLabel.innerText = title;
+            modal.style.display = "flex";
+        }
+
+        function closeMap() {
+            var modal = document.getElementById("mapModal");
+            var mapFrame = document.getElementById("googleMap");
+            modal.style.display = "none";
+            mapFrame.src = "";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("mapModal");
+            if (event.target == modal) {
+                closeMap();
+            }
+        }
+    </script>
+</body>
+ 
+</body>
+</html>

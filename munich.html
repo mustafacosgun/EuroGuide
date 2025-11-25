@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Istanbul - EuroGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="back-btn">← Back to Map</a>
+        <div class="logo">EuroGuide: Istanbul</div>
+    </nav>
+
+    <header class="city-hero munich-hero">
+        <div class="hero-text">
+            <h1>MUNICH</h1>
+            <p>Heart of Bavaria</p>
+        </div>
+    </header>
+
+    <main class="city-content fade-in">
+        <section class="info-box">
+            <h2>About the City</h2>
+            <p>Munich is the capital of Bavaria, home to centuries-old buildings, numerous museums, and the world-famous Oktoberfest.</p>
+        </section>
+
+        <section class="section-title"><h2>Top Sights to Visit</h2></section>
+
+
+
+
+        <div class="card-grid">
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://maps.google.com/maps?q=Marienplatz+Munich&t=&z=15&ie=UTF8&iwloc=&output=embed', 'Marienplatz')">
+                <img src="images/marienplatz.jpg" alt="Marienplatz">
+                <div class="card-info">
+                    <h3>Marienplatz 📍</h3>
+                    <p>Click for Map! The city's central square since 1158.</p>
+                </div>
+            </div>
+
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://maps.google.com/maps?q=English+Garden+Munich&t=&z=14&ie=UTF8&iwloc=&output=embed', 'English Garden')">
+                <img src="images/englishgarden.jpg" alt="English Garden">
+                <div class="card-info">
+                    <h3>English Garden 📍</h3>
+                    <p>Click for Map! One of the world's largest urban parks.</p>
+                </div>
+            </div>
+
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://maps.google.com/maps?q=Nymphenburg+Palace&t=&z=14&ie=UTF8&iwloc=&output=embed', 'Nymphenburg Palace')">
+                <img src="images/nymphenburg.jpg" alt="Nymphenburg Palace">
+                <div class="card-info">
+                    <h3>Nymphenburg Palace 📍</h3>
+                    <p>Click for Map! A baroque palace of Bavarian rulers.</p>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <section class="section-title" style="margin-top: 50px;"><h2>What to Eat?</h2></section>
+
+        <div class="card-grid">
+            <div class="card">
+                <img src="images/brezel.jpg" alt="Pretzel">
+                <div class="card-info">
+                    <h3>Brezel (Pretzel)</h3>
+                    <p>A type of baked pastry made from dough that is commonly shaped into a knot.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/schnitzel.jpg" alt="Schnitzel">
+                <div class="card-info">
+                    <h3>Schnitzel</h3>
+                    <p>A thin slice of meat fried in fat, a classic German dish.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <section class="timeline-section">
+        <h2>⏱️ Perfect 1-Day Itinerary</h2>
+        <div class="timeline">
+            <div class="time-container left">
+                <div class="content">
+                    <h3>🥨 09:00 AM - Bavarian Breakfast</h3>
+                    <p>Try Weisswurst (white sausage) with sweet mustard and a pretzel.</p>
+                </div>
+            </div>
+            <div class="time-container right">
+                <div class="content">
+                    <h3>🕰️ 11:00 AM - Glockenspiel</h3>
+                    <p>Watch the famous clock chiming at Marienplatz at 11:00 sharp.</p>
+                </div>
+            </div>
+            <div class="time-container left">
+                <div class="content">
+                    <h3>🌳 02:00 PM - English Garden</h3>
+                    <p>Walk through the park and watch surfers on the Eisbach river.</p>
+                </div>
+            </div>
+            <div class="time-container right">
+                <div class="content">
+                    <h3>🍺 07:00 PM - Beer Garden</h3>
+                    <p>End the day at Hofbräuhaus with a liter of beer and folk music.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2025 EuroGuide Project</p>
+    </footer>
+
+
+
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeMap()">×</span>
+            <h3 id="mapTitle">Location</h3>
+            <iframe id="googleMap" src="" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openMap(url, title) {
+            var modal = document.getElementById("mapModal");
+            var mapFrame = document.getElementById("googleMap");
+            var mapLabel = document.getElementById("mapTitle");
+            mapFrame.src = url;
+            mapLabel.innerText = title;
+            modal.style.display = "flex";
+        }
+        function closeMap() {
+            document.getElementById("mapModal").style.display = "none";
+            document.getElementById("googleMap").src = "";
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("mapModal")) { closeMap(); }
+        }
+    </script>
+</body>
+
+</body>
+</html>
