@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Istanbul - EuroGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <nav class="navbar">
+        <a href="index.html" class="nav-logo">🌍 EuroGuide</a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Destinations ▾</a>
+                <div class="dropdown-content">
+                    <a href="istanbul.html">Istanbul</a>
+                    <a href="paris.html">Paris</a>
+                    <a href="rome.html">Rome</a>
+                    <a href="munich.html">Munich</a>
+                    <a href="amsterdam.html">Amsterdam</a>
+                    <a href="madrid.html">Madrid</a>
+                </div>
+            </li>
+
+            <li><a href="#budget">Plan Trip</a></li> <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="city-hero madrid-hero">
+        <div class="hero-text">
+            <h1>MADRID</h1>
+            <p>The City of Passion</p>
+        </div>
+    </header>
+
+    <main class="city-content fade-in">
+        <section class="info-box">
+            <h2>About the City</h2>
+            <p>Madrid, Spain's central capital, is a city of elegant boulevards and expansive, manicured parks. It is known for its rich European art.</p>
+        </section>
+
+        <section class="section-title"><h2>Top Sights to Visit</h2></section>
+
+        
+
+
+        <div class="card-grid">
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.337582236683!2d-3.717145823485758!3d40.41795557143962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e07a2a53d%3A0xc3716d16f860223e!2sRoyal%20Palace%20of%20Madrid!5e0!3m2!1sen!2str!4v1700000000000', 'Royal Palace Location')">
+                <img src="images/royalpalace.jpg" alt="Royal Palace">
+                <div class="card-info">
+                    <h3>Royal Palace 📍</h3>
+                    <p>Click for Map! The official residence of the Spanish royal family.</p>
+                </div>
+            </div>
+
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.495208620202!2d-3.694301523485896!3d40.41378177143997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289d67d71625%3A0x6244670c538a7c2c!2sMuseo%20Nacional%20del%20Prado!5e0!3m2!1sen!2str!4v1700000000000', 'Prado Museum Location')">
+                <img src="images/prado.jpg" alt="Prado Museum">
+                <div class="card-info">
+                    <h3>Prado Museum 📍</h3>
+                    <p>Click for Map! The main Spanish national art museum.</p>
+                </div>
+            </div>
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1518.8527287039974!2d-3.7084734111495568!3d40.415375392859964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287ed85fe0d9%3A0xd202c4f0d67625e8!2sPlaza%20Mayor%2C%20Centro%2C%20Madrid%2C%20%C4%B0spanya!5e0!3m2!1str!2str!4v1764069417762!5m2!1str!2str', 'Prado Museum Location')">
+                <img src="images/plazamayor.jpg" alt="Plaza Mayor">
+                <div class="card-info">
+                    <h3>Plaza Mayor 📍</h3>
+                    <p>Click for Map! A major public space in the heart of Madrid, perfect for walking.</p>
+                </div>
+            </div>
+             <div class="card" style="cursor: pointer;" onclick="openMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.0!2d-3.69!3d40.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228e23705d39f%3A0xa8fff6d26e2b1988!2sSantiago%20Bernab%C3%A9u%20Stadium!5e0!3m2!1sen!2str!4v1', 'Santiago Bernabéu Location')">
+                <img src="images/santiagobernabeu.webp" alt="Santiago Bernabéu">
+                <div class="card-info">
+                    <h3>Santiago Bernabéu 📍</h3>
+                    <p>The legendary home stadium of Real Madrid C.F. and a temple of world football.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-title" style="margin-top: 50px;"><h2>What to Eat?</h2></section>
+
+        <div class="card-grid">
+            <div class="card">
+                <img src="images/churros.jpg" alt="Churros">
+                <div class="card-info">
+                    <h3>Churros</h3>
+                    <p>Fried dough pastry, predominantly choux, usually dipped in chocolate.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/tapas.jpg" alt="Tapas">
+                <div class="card-info">
+                    <h3>Tapas</h3>
+                    <p>Small savory dishes, snacks or appetizers of Spanish cuisine.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="timeline-section">
+        <h2>⏱️ Perfect 1-Day Itinerary</h2>
+        <div class="timeline">
+            <div class="time-container left">
+                <div class="content">
+                    <h3>🍫 09:00 AM - Churros & Chocolate</h3>
+                    <p>Dip hot churros into thick hot chocolate at San Ginés.</p>
+                </div>
+            </div>
+            <div class="time-container right">
+                <div class="content">
+                    <h3>🎨 11:30 AM - Golden Triangle</h3>
+                    <p>Visit the Prado Museum to see masterpieces of art.</p>
+                </div>
+            </div>
+            <div class="time-container left">
+                <div class="content">
+                    <h3>🌳 04:00 PM - Retiro Park</h3>
+                    <p>Relax and row a boat in the lake of El Retiro Park.</p>
+                </div>
+            </div>
+            <div class="time-container right">
+                <div class="content">
+                    <h3>🍤 09:00 PM - Tapas Crawl</h3>
+                    <p>Go to La Latina neighborhood and hop from bar to bar eating Tapas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <p>&copy; 2025 EuroGuide Project</p>
+    </footer>
+
+
+
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeMap()">×</span>
+            <h3 id="mapTitle">Location</h3>
+            <iframe id="googleMap" src="" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openMap(url, title) {
+            var modal = document.getElementById("mapModal");
+            var mapFrame = document.getElementById("googleMap");
+            var mapLabel = document.getElementById("mapTitle");
+            mapFrame.src = url;
+            mapLabel.innerText = title;
+            modal.style.display = "flex";
+        }
+        function closeMap() {
+            document.getElementById("mapModal").style.display = "none";
+            document.getElementById("googleMap").src = "";
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("mapModal")) { closeMap(); }
+        }
+    </script>
+</body>
+
+</body>
+</html>

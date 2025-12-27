@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Istanbul - EuroGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <nav class="navbar">
+        <a href="index.html" class="nav-logo">🌍 EuroGuide</a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Destinations ▾</a>
+                <div class="dropdown-content">
+                    <a href="istanbul.html">Istanbul</a>
+                    <a href="paris.html">Paris</a>
+                    <a href="rome.html">Rome</a>
+                    <a href="munich.html">Munich</a>
+                    <a href="amsterdam.html">Amsterdam</a>
+                    <a href="madrid.html">Madrid</a>
+                </div>
+            </li>
+
+            <li><a href="#budget">Plan Trip</a></li> <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="city-hero amsterdam-hero">
+        <div class="hero-text">
+            <h1>AMSTERDAM</h1>
+            <p>Venice of the North</p>
+        </div>
+    </header>
+
+    <main class="city-content fade-in">
+        <section class="info-box">
+            <h2>About the City</h2>
+            <p>Amsterdam is known for its artistic heritage, elaborate canal system and narrow houses with gabled facades.</p>
+        </section>
+
+        <section class="section-title"><h2>Top Sights to Visit</h2></section>
+
+
+
+        <div class="card-grid">
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://maps.google.com/maps?q=Rijksmuseum+Amsterdam&t=&z=15&ie=UTF8&iwloc=&output=embed', 'Rijksmuseum')">
+                <img src="images/rijksmuseum.jpg" alt="Rijksmuseum">
+                <div class="card-info">
+                    <h3>Rijksmuseum 📍</h3>
+                    <p>Click for Map! The Dutch national museum of arts.</p>
+                </div>
+            </div>
+
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://maps.google.com/maps?q=Van+Gogh+Museum&t=&z=15&ie=UTF8&iwloc=&output=embed', 'Van Gogh Museum')">
+                <img src="images/vangogh.jpg" alt="Van Gogh Museum">
+                <div class="card-info">
+                    <h3>Van Gogh Museum 📍</h3>
+                    <p>Click for Map! Dedicated to the works of Vincent van Gogh.</p>
+                </div>
+            </div>
+
+            <div class="card" style="cursor: pointer;" onclick="openMap('https://maps.google.com/maps?q=Amsterdam+Canals&t=&z=14&ie=UTF8&iwloc=&output=embed', 'Canal Ring')">
+                <img src="images/canals.jpg" alt="Canal Cruise">
+                <div class="card-info">
+                    <h3>Canal Ring 📍</h3>
+                    <p>Click for Map! Historic waterways for boat tours.</p>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <section class="section-title" style="margin-top: 50px;"><h2>What to Eat?</h2></section>
+
+        <div class="card-grid">
+            <div class="card">
+                <img src="images/stroopwafel.jpg" alt="Stroopwafel">
+                <div class="card-info">
+                    <h3>Stroopwafel</h3>
+                    <p>A wafer cookie made from two thin layers of baked dough joined by a caramel filling.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/cheese.jpg" alt="Dutch Cheese">
+                <div class="card-info">
+                    <h3>Gouda Cheese</h3>
+                    <p>Famous Dutch yellow cheese made from cow's milk.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <section class="timeline-section">
+        <h2>⏱️ Perfect 1-Day Itinerary</h2>
+        <div class="timeline">
+            <div class="time-container left">
+                <div class="content">
+                    <h3>🥞 09:30 AM - Dutch Pancakes</h3>
+                    <p>Start with giant Pannenkoeken (pancakes) nearby the canals.</p>
+                </div>
+            </div>
+            <div class="time-container right">
+                <div class="content">
+                    <h3>🚲 11:30 AM - Bike Like a Local</h3>
+                    <p>Rent a bike and cycle to Vondelpark or Museumplein.</p>
+                </div>
+            </div>
+            <div class="time-container left">
+                <div class="content">
+                    <h3>🍟 02:00 PM - Fries Break</h3>
+                    <p>Grab a cone of thick Dutch fries with mayo sauce.</p>
+                </div>
+            </div>
+            <div class="time-container right">
+                <div class="content">
+                    <h3>🛥️ 06:00 PM - Canal Cruise</h3>
+                    <p>See the dancing houses from the water on a sunset boat tour.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 EuroGuide Project</p>
+    </footer>
+
+
+
+
+
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeMap()">×</span>
+            <h3 id="mapTitle">Location</h3>
+            <iframe id="googleMap" src="" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openMap(url, title) {
+            var modal = document.getElementById("mapModal");
+            var mapFrame = document.getElementById("googleMap");
+            var mapLabel = document.getElementById("mapTitle");
+            mapFrame.src = url;
+            mapLabel.innerText = title;
+            modal.style.display = "flex";
+        }
+        function closeMap() {
+            document.getElementById("mapModal").style.display = "none";
+            document.getElementById("googleMap").src = "";
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("mapModal")) { closeMap(); }
+        }
+    </script>
+</body>
+
+</body>
+</html>
